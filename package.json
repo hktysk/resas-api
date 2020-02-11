@@ -4,6 +4,7 @@
   "description": "RESAS APIとフロントエンドの中継を担当",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon server-local.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/hktysk/resas-api/issues"
   },
-  "homepage": "https://github.com/hktysk/resas-api#readme"
+  "homepage": "https://github.com/hktysk/resas-api#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  }
 }
