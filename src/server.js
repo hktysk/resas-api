@@ -3,15 +3,14 @@ require('dotenv').config();
 const express = require('express');
 const serverless = require('serverless-http');
 const netlifyFunctionsPath = require('./lib/netlifyFunctionsPath');
+const pages = {
+  prefectures: require('./pages/prefectures')
+}
 
 const app = express();
 const router = express.Router();
 
-router.get('/', (_, res) => {
-  res.json({
-    message: 'サンプルのページです。'
-  });
-});
+router.get('/prefectures', pages.prefectures);
 
 app.use((_, res, next) => {
   res.header('Access-Control-Allow-Origin', process.env.CORS);
