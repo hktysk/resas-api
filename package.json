@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon server-local.js",
+    "build": "netlify-lambda build src --config webpack.config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,7 +18,11 @@
     "url": "https://github.com/hktysk/resas-api/issues"
   },
   "homepage": "https://github.com/hktysk/resas-api#readme",
-  "dependencies": {},
+  "dependencies": {
+    "netlify-lambda": "^1.6.3",
+    "serverless-http": "^2.3.1",
+    "webpack-node-externals": "^1.7.2"
+  },
   "devDependencies": {
     "dotenv": "^8.2.0",
     "express": "^4.17.1"
