@@ -1,0 +1,39 @@
+{
+  "name": "resas-api",
+  "version": "1.0.0",
+  "description": "RESAS APIとフロントエンドの中継を担当",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server-local.js",
+    "build": "netlify-lambda build src --config webpack.config.js",
+    "test": "jest"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hktysk/resas-api.git"
+  },
+  "author": "hktysk",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hktysk/resas-api/issues"
+  },
+  "homepage": "https://github.com/hktysk/resas-api#readme",
+  "dependencies": {
+    "netlify-lambda": "^1.6.3",
+    "serverless-http": "^2.3.1",
+    "supertest": "^4.0.2",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "husky": "^4.2.1",
+    "jest": "^25.1.0",
+    "node-fetch": "^2.6.0"
+  }
+}
