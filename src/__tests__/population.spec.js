@@ -13,4 +13,12 @@ describe('/population', () => {
         expect(res.statusCode).toBe(200);
       })
   });
+
+  it('人口データを取得できなかった場合は400を返すか', () => {
+    req(server)
+      .get(`${netlifyFunctionsPath}/population/1000`)
+      .then(res => {
+        expect(res.statusCode).toBe(400);
+      })
+  })
 })
