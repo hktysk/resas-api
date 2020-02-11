@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/hktysk/resas-api/issues"
   },
-  "homepage": "https://github.com/hktysk/resas-api#readme"
+  "homepage": "https://github.com/hktysk/resas-api#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "express": "^4.17.1"
+  }
 }
