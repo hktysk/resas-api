@@ -1,6 +1,7 @@
 'use strict'
 require('dotenv').config();
 const express = require('express');
+const netlifyFunctionsPath = require('./lib/netlifyFunctionsPath');
 const app = express();
 const router = express.Router();
 
@@ -22,6 +23,6 @@ app.use((_, res, next) => {
   next();
 })
 
-app.use('/', router);
+app.use(netlifyFunctionsPath, router);
 
 module.exports = app;
