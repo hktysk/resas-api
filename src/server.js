@@ -4,13 +4,15 @@ const express = require('express');
 const serverless = require('serverless-http');
 const netlifyFunctionsPath = require('./lib/netlifyFunctionsPath');
 const pages = {
-  prefectures: require('./pages/prefectures')
+  prefectures: require('./pages/prefectures'),
+  population: require('./pages/population')
 }
 
 const app = express();
 const router = express.Router();
 
 router.get('/prefectures', pages.prefectures);
+router.get('/population/:prefCode', pages.population);
 
 app.use((_, res, next) => {
   res.header('Access-Control-Allow-Origin', process.env.CORS);
